@@ -1,0 +1,26 @@
+// Screen breakpoints //
+$mobile: 320px;
+$tablet: 768px;
+$large: 960px;
+$desktop: 1024px;
+$extraLarge: 1200px;
+$extraExtraLarge: 1536px;
+$intendedFigmaMobile: 360px;
+$intendedFigmaDesktop: 1440px;
+$customBreakPoint: 920px;
+$largeDesktop: 1400px;
+$smallBreakpoint: 920px;
+$customBreakPointDesktop: 1366px;
+
+:export {
+  mobile: $mobile;
+  tablet: $tablet;
+  large: $large;
+  desktop: $desktop;
+  extraLarge: $extraLarge;
+  extraExtraLarge: $extraExtraLarge;
+  intendedFigmaMobile: $intendedFigmaMobile;
+  intendedFigmaDesktop: $intendedFigmaDesktop;
+  customBreakpoint: $customBreakPoint;
+  customBreakPointDesktop: $customBreakPointDesktop;
+}

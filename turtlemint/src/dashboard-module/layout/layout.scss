@@ -1,0 +1,32 @@
+@mixin horizontal-spacing {
+  @media screen and (min-width: $desktop) {
+    padding-left: 112px !important;
+    padding-right: 112px !important;
+  }
+}
+
+.dashboard-container {
+  padding: 20px;
+  min-height: calc(100vh - 60px - 22px);
+
+  @media screen and (min-width: $desktop) {
+    min-height: calc(100vh - 60px - 35px);
+    padding-top: 36px;
+    @include horizontal-spacing();
+  }
+
+  .outer-container {
+    padding: 50px 30px 60px;
+    box-shadow: 0px 3px 30px rgba(153, 186, 208, 0.3);
+    border-radius: 10px;
+    min-height: 50vh;
+
+    @media screen and (max-width: $desktop) {
+      padding: 20px 20px 60px;
+    }
+  }
+}
+
+.turtlemint-navbar {
+  @include horizontal-spacing();
+}
