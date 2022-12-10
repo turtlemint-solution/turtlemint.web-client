@@ -3,4 +3,6 @@ export const ROUTING_URLS = {
   HOME: "/home",
   NON_EXISTENT: "*",
   SUPPORT: "support",
+  CAR_INSURANCE: "car-insurance",
+  BIKE_INSURANCE: "bike-insurance",
 };
