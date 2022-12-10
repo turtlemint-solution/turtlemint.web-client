@@ -10,6 +10,7 @@ import { Flex, Stack, Text } from "@chakra-ui/react";
 import { HondaModels } from "../../../common/enums/honda-models";
 import { HyundaiModels } from "../../../common/enums/hyundai-models";
 import { SkodaModels } from "../../../common/enums/skoda-modela";
+import { Fetcher } from "../insurances/car/car-table";
 /**
  * @returns {JSX.Element}
  */
@@ -110,9 +111,15 @@ const CarMakers: FC<{}> = (): JSX.Element => {
     setStep(3);
     setCarModel(model);
   };
+  const [details, setDetails] = useState({});
   const submitYear = (year: number) => {
     setStep(4);
     setYear(year);
+    setDetails({
+      maker: carMaker,
+      model: carModel,
+      year: year,
+    });
   };
   return (
     <div>
@@ -199,6 +206,9 @@ const CarMakers: FC<{}> = (): JSX.Element => {
             );
           })}
         </div>
+      )}
+      {step === 4 && (
+        <Fetcher step4={true} model={carModel} maker={carMaker} year={year} />
       )}
     </div>
   );

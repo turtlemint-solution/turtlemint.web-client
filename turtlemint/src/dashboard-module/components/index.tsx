@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "../layout/layout";
 import Support from "./support";
 import CarInsurance from "./car-insurance";
+import CarTable from "./insurances/car/car-table";
 
 const Home = () => {
   return (
@@ -11,10 +12,7 @@ const Home = () => {
       <Routes>
         <Route index element={<Dashboard />} />
         <Route path={`${ROUTING_URLS.SUPPORT}`} element={<Support />} />
-        <Route
-          path={`${ROUTING_URLS.CAR_INSURANCE}`}
-          element={<CarInsurance />}
-        />
+        <Route path={`${ROUTING_URLS.CAR_INSURANCE}`} element={<CarTable />} />
       </Routes>
     </Layout>
   );
